@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/Homepage/detailedScreen/detailed_screen.dart';
+import 'package:shopping/Homepage/detailedScreen/detail1.dart';
 import 'package:shopping/Product_model/model.dart';
 
 class ProductCard extends StatelessWidget {
   ProductCard({super.key, required this.productData});
   Products productData;
- 
-
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () =>  Navigator.of(context).pushNamed(DetailedScreen.routeName , arguments: productData), 
+      onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ScreenProduct(productAxis: productData))),
       child: Column(
         children: [
           Stack(children: [
@@ -28,17 +29,15 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
-             Align(
+            Align(
                 child: Padding(
-                  
-              padding:const EdgeInsets.only(top: 180, left: 100, bottom: 10),
-              child: IconButton(onPressed: () {
-                
-              }, icon:const Icon(Icons.favorite_border_rounded),)
-            )
-            )
-          ]
-          ),
+                    padding:
+                        const EdgeInsets.only(top: 180, left: 100, bottom: 10),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.favorite_border_rounded),
+                    )))
+          ]),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 1),
             child: Text(productData.name!,
@@ -46,8 +45,10 @@ class ProductCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 1),
-            child: Text(productData.discription!,
-            style: TextStyle(color: Colors.blue,fontSize: 11),),
+            child: Text(
+              productData.discription!,
+              style: TextStyle(color: Colors.blue, fontSize: 11),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 1),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/Homepage/detailedScreen/detailed_screen.dart';
 
 import 'package:shopping/splash/splash.dart';
 
@@ -19,10 +18,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       home: const splash(),
-      routes:routes,
+      // routes:routes,
     );
   }
 }
- final Map<String, Widget Function(BuildContext)> routes ={
- DetailedScreen.routeName:(_)=>const DetailedScreen(),
-};
+//  final Map<String, Widget Function(BuildContext)> routes ={
+//  ScreenProduct.routeName:(_)=>ScreenProduct(productAxis:),
+// };

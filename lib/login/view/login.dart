@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/Homepage/catogory.dart';
-import 'package:shopping/Homepage/home_screen.dart';
-
 import 'package:shopping/Register/view/register.dart';
 import 'package:shopping/dashboard/dashboard.dart';
 import 'package:shopping/login/view/forgot.dart';
-
 
 class Login extends StatelessWidget {
   const Login({super.key});

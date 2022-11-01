@@ -54,45 +54,36 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          drawer:const CustomeDrawer(),
-         
-          backgroundColor: const Color.fromARGB(255, 217, 216, 212),
-          body: 
-    
-          SingleChildScrollView(
+        drawer: const CustomeDrawer(),
+        backgroundColor: const Color.fromARGB(255, 217, 216, 212),
+        body: SingleChildScrollView(
           // physics: ScrollPhysics(),
           child: Column(
             children: <Widget>[
-               UserCategory(),
-               Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 3),
-                 child: GridView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                   shrinkWrap: true,
-                   gridDelegate:
-                       const SliverGridDelegateWithFixedCrossAxisCount(
-                     crossAxisCount: 2,
-                     crossAxisSpacing: 50,
-                     mainAxisSpacing: 25,
-                     childAspectRatio: .40,
-                   ),
-                   itemCount: product.length,
-                   itemBuilder: (BuildContext context, int index) {
-                     return ProductCard(
-                       productData: product[index],
-                      
-                     );
-                   },
-                 ),
-               ),
+              UserCategory(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 3),
+                child: GridView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 50,
+                    mainAxisSpacing: 25,
+                    childAspectRatio: .40,
+                  ),
+                  itemCount: product.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ProductCard(
+                      productData: product[index],
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
-          
-          ),
+      ),
     );
   }
 }
-
-
-

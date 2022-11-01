@@ -50,6 +50,7 @@ class _DetailedScreenState extends State<DetailedScreen> {
                           child: const Icon(Icons.chevron_left_outlined),
                         ),
                         const Icon(Icons.share),
+                        Icon(Icons.share)
                       ],
                     ),
                     Hero(
@@ -158,7 +159,7 @@ class _DetailedScreenState extends State<DetailedScreen> {
                                     style: TextStyle(color: Colors.blue),
                                   )),
                             ),
-                          ],
+                          ], 
                         ),
                       ),
                     ),
